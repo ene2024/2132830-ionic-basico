@@ -1,0 +1,242 @@
+body {
+    font-family:Arial, Helvetica, sans-serif;
+    background-color: black;
+    color: white;
+}
+
+.encabezado {
+    margin-top: 15px;
+    background-color: gray;
+    overflow: hidden;
+    width: 97%;
+    margin-left: 5px;
+}
+
+.encabezado input[type=text] {
+    float: left;
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: none;
+    font-size: medium;
+    background-color: transparent;
+    color: white;
+}
+
+.busqueda {
+    float: left;
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    height: 7px;
+    background-color: transparent;
+    border: none;
+    font-size: large;
+    margin-top: 7px;
+}
+
+.busqueda i{
+    color: lightgray;
+}
+
+::placeholder {
+    color: lightgray;
+}
+
+.equis{
+    color: lightgray;
+    margin-top: 7px;
+    float: right;
+    background-color: inherit;
+    margin-right: 5px;
+    border: none;
+    font-size: large;
+}
+
+h3 {
+    margin-left: 5px;
+    margin-bottom: 15px;
+}
+
+.play {
+    background-color: transparent;
+    border: none;
+    font-size: large;
+    float: right;
+    margin-top: 40px;
+    margin-right: 10px;
+}
+
+.play i{
+    color: white;
+}
+
+.renglon {
+    background-color: rgb(20, 20, 20);
+    width: 100%;
+    height: 100px;    
+    margin: none;
+    margin-bottom: 3px;
+}
+
+.cuadro {
+    background-color: #3b3b3b;
+    height: 100%;
+    width: 100px;
+    padding: 0%;
+    display: block;
+    float: left;
+    display: none;
+}
+
+.pelicula {
+    background-color: transparent;
+    border: none;
+    height: 100%;
+    padding: 0%;
+}
+
+.pelicula p{
+    color: lightgray;
+    font-weight: bolder;
+    font-size: large;
+    float: left;
+    margin-left: 7px;
+    margin-top: 40px;
+}
+
+.menu {
+    background-color: rgb(20, 20, 20);
+    width: 100%;
+    padding: 10px;
+    float: left;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.simbolo {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: large;
+    width: 19%;
+    margin-bottom: 0;
+}
+
+.simbolo span {
+    font-size: small;
+    margin-bottom: 5px;
+    font-weight: bolder;
+    display: block;
+    margin: 0;
+}
+
+.busqpop {
+    width: 100%;
+}
+
+.busqpop p{
+    display: none;
+    font-weight: bold;
+}
+
+#c1 {
+    display: inline;
+}
+#c2 {
+    display: inline;
+}
+#c3 {
+    display: inline;
+}
+#c4 {
+    display: inline;
+}
+#c5 {
+    display: inline;
+}
+#c6 {
+    display: inline;
+}
+#c7 {
+    display: inline;
+}
+#c8 {
+    display: inline;
+}
+
+#r8 {
+    margin-bottom: 70px;
+}
+
+@media screen and (min-width: 600px){
+    .encabezado {
+        width: 350px;
+    }
+
+    .busqpop {
+        background-color: #3b3b3b;
+        margin: none;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        margin-left: 0;
+    }
+
+    .busqpop h3{
+        display: none;
+    }
+
+    .busqpop p{
+        display:inline;
+        padding: 5px;
+        font-size: small;
+    }
+
+    .pelicula p {
+        display: none;
+    }
+
+    .play {
+        display: none;
+    }
+
+    .cuadro {
+        background-color: lightgray;
+        margin-right: 11px;
+        width: 100px;
+        display: inline-block;
+        margin-bottom: 5px;
+    }
+
+    .renglon {
+        height: auto;
+        margin-bottom: 5px;
+        margin-left: 10px;
+    }
+
+    .pelicula {
+        width: 100%;
+        height: 150px;
+    }
+
+    #r4 {
+        margin-bottom: 70px;
+    }
+    
+    #r5 {
+        display: none;
+    }
+    
+    #r6 {
+        display: none;
+    }
+    
+    #r7 {
+        display: none;
+    }
+
+    #r8 {
+        display: none;
+    }
+}
