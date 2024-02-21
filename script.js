@@ -17,8 +17,8 @@ function Agregar () {
     
     totalP.innerHTML = 'Total ............. $' + total;
     let elementoTicket = document.createElement("p");
+    elementoTicket.style.textAlign = "center";
     elementoTicket.innerHTML =  articuloV + '.............' + '$' + montoV;
 
     divTicket.appendChild(elementoTicket);
-
 }
