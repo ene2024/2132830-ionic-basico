@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
+    <link rel="stylesheet" href="LAM_p4_estilos.css">
+</head>
+<body>
+    <div class="ticket"><h1>Ticket de compra</h1></div>
+    
+    <ion-input 
+    label="Articulo"
+    label-placement = "stacked"
+    id="articulo"
+    [clearInput] = "true"
+    placeholder="Ingrese el nombre del articulo" 
+    style="margin-left: 20px; margin-bottom: 20px; max-width: 40%;"></ion-input>
+
+    <ion-input label="Monto" 
+    placeholder="Ingrese el precio" 
+    label-placement = "stacked"
+    id="monto"
+    [clearInput] = "true" 
+    style="margin-left: 20px; margin-bottom: 20px; max-width: 40%;"></ion-input>
+
+    <ion-button style="margin-left: 20px;" id="agregar" onclick="Agregar()">Agregar</ion-button>
+
+    <div id="ticket_comp">
+        <div class="ticket" id="ticket_comp"><h2>=====Ticket de compra====</h2></div>
+    </div>
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
