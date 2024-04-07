@@ -6,14 +6,17 @@
   <ion-item-sliding>
     <ion-item-options side="start">
       <ion-item-option>Agregar a Favoritos</ion-item-option>
-      <ion-item-option color="danger" (click)="presentActionSheet()">Eliminar</ion-item-option>
+      <!---<ion-item-option color="danger" (click)="presentActionSheet()">Eliminar</ion-item-option>--->
+      <ion-item-option color="danger" id="open-action-sheet">Eliminar</ion-item-option>
     </ion-item-options>
 
     <ion-item>{{alumno}}</ion-item>
 
     <ion-item-options side="end">
       <ion-item-option>Agregar a Favoritos</ion-item-option>
-      <ion-item-option color="danger" (click)="presentActionSheet()">Eliminar</ion-item-option>
+      <!---<ion-item-option color="danger" (click)="presentActionSheet()">Eliminar</ion-item-option>--->
+      <ion-item-option color="danger" id="open-action-sheet">Eliminar</ion-item-option>
     </ion-item-options>
   </ion-item-sliding>
 </ion-list>
+<ion-action-sheet trigger="open-action-sheet" header="Acciones" [buttons]="actionSheetButtons"></ion-action-sheet>
