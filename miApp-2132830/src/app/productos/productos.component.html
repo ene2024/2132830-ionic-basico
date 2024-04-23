@@ -1,9 +1,10 @@
 <ion-content>
+  <h2>Lista de productos</h2>
   <ion-card *ngFor="let producto of productos">
     <ion-card-title>{{producto.title}}</ion-card-title>
     <ion-card-content>
-      <img src="producto.image" width="200">
-      <a>Ir a detalles</a>
+      <img [src]="producto.image" width="200" height="150px">
+      <a [routerLink] ="['/productoDetalle', producto.id]">Ir a detalles</a>
     </ion-card-content>
   </ion-card>
 </ion-content>
