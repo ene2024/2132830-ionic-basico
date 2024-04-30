@@ -1,22 +1,19 @@
-<p>
-  lista-alumnos works!
-</p>
+<form #alumnosForm = "ngForm" (ngSubmit) = "agregarAlumno()">
+  <ion-label>Nombre del alumno: </ion-label>
+  <ion-input required [(ngModel)] = "alumno.nombre" placeholder="Ejemplo: Eduardo" name="nombre"></ion-input>
+  <ion-label>
+    <p>Presente:</p>
+    <ion-checkbox [(ngModel)]="alumno.presente" name="presente"></ion-checkbox>
+  </ion-label>
+  <div>
+    <ion-button type="submit">Agregar</ion-button>
+  </div>
+</form>
 
 <ion-list *ngFor="let alumno of alumnos">
-  <ion-item-sliding>
-    <ion-item-options side="start">
-      <ion-item-option>Agregar a Favoritos</ion-item-option>
-      <!---<ion-item-option color="danger" (click)="presentActionSheet()">Eliminar</ion-item-option>--->
-      <ion-item-option color="danger" id="open-action-sheet">Eliminar</ion-item-option>
-    </ion-item-options>
-
-    <ion-item>{{alumno}}</ion-item>
-
-    <ion-item-options side="end">
-      <ion-item-option>Agregar a Favoritos</ion-item-option>
-      <!---<ion-item-option color="danger" (click)="presentActionSheet()">Eliminar</ion-item-option>--->
-      <ion-item-option color="danger" id="open-action-sheet">Eliminar</ion-item-option>
-    </ion-item-options>
-  </ion-item-sliding>
+  <ion-item>
+    {{alumno.nombre}} : 
+    <span *ngIf = "alumno.presente" style="margin-left: 3px"> presente</span>
+    <span *ngIf = "!alumno.presente" style="margin-left: 3px"> falta</span>
+  </ion-item>
 </ion-list>
-<ion-action-sheet trigger="open-action-sheet" header="Acciones" [buttons]="actionSheetButtons"></ion-action-sheet>

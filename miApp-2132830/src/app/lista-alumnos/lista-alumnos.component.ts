@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { alumno } from './alumno.model';
+import { ActionSheetController } from '@ionic/angular';
 
 @Component({
   selector: 'app-lista-alumnos',
@@ -7,11 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListaAlumnosComponent  implements OnInit {
 
-  constructor() { }
+  constructor(private ActionSheetController: ActionSheetController) { }
 
   ngOnInit() {}
 
-  alumnos : any = ["Carlos", "Ximena", "Alberto", "Eduardo", "Baraba", "Georgina", "Kevin"];
+  alumnos : alumno[] = [];
 
   public actionSheetButtons = [
     {
@@ -29,4 +31,21 @@ export class ListaAlumnosComponent  implements OnInit {
       },
     },
   ];
+
+  alumno: alumno = {
+    nombre: '',
+    presente: false
+  }
+
+  result: string = '';
+
+  agregarAlumno(): void {
+    this.alumnos.push(this.alumno);
+    this.alumno = {
+      nombre: '',
+      presente: false
+    } 
+  }
+
+
 }
