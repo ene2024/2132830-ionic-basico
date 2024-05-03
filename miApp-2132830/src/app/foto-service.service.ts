@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Camera, CameraResultType, CameraSource, Photo } from '@capacitor/camera';
+import { Foto } from './foto.model';
 import { Filesystem, Directory } from '@capacitor/filesystem';
 import { Preferences } from '@capacitor/preferences';
 
@@ -15,7 +16,16 @@ export class FotoServiceService {
     
     resultType: CameraResultType.Uri,      
     source: CameraSource.Camera,
-    quality: 100    
+    quality: 100
+    });
+  
+    this.fotos.unshift({
+      filepath: '',
+      webViewPath: capturedPhoto.webPath
+    })
+  
+  }
+
+    public fotos: Foto[] = [];
     
-    });}
 }
