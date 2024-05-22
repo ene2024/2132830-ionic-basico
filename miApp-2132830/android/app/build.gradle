@@ -2,8 +2,8 @@ apply plugin: 'com.android.application'
 
 android {
     namespace "com.miApp2132830.app"
-    compileSdkVersion rootProject.ext.compileSdkVersion
-    defaultConfig {
+  compileSdkVersion 34
+  defaultConfig {
         applicationId "com.miApp2132830.app"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
@@ -29,6 +29,7 @@ repositories {
         dirs '../capacitor-cordova-android-plugins/src/main/libs', 'libs'
     }
 }
+
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
